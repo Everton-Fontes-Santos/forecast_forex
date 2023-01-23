@@ -2,9 +2,9 @@ FROM tensorflow/serving
 
 COPY ./models/ /models/
 
-COPY ./config.config /config/config.config
+COPY ./models.config /models/models.config
 
-ENV MODEL_CONFIG_FILE=/config/config.config
+ENV MODEL_CONFIG_FILE=/models/models.config
 
 ENV MODEL_BASE_PATH=/models/saved_model
 ENV MODEL_NAME=saved_model
