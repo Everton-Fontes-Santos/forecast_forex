@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  tensorflow-serving:
+    image: tensorflow/serving
+    container_image: tensor_serving
+    environment:
+      MODEL_CONFIG_FILE: /models.config
+      MODEL_BASE_PATH: /models/saved_model
+      MODEL_NAME: saved_model
+    command: --model_config_file=/models/models.config
+    ports:
+      - '8500:8500'
+      - '8501:8501'
+    volumes:
+      - '/models:/models'
+      - '/models.config:/models/models.config'
