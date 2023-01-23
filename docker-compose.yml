@@ -7,7 +7,7 @@ services:
     restart: always
     environment:
       MODEL_CONFIG_FILE: /models.config
-      MODEL_BASE_PATH: /models/saved_model
+      MODEL_BASE_PATH: /models/
       MODEL_NAME: saved_model
     command: --model_config_file=/models/models.config
     ports:
