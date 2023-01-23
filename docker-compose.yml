@@ -5,8 +5,6 @@ services:
     image: tensorflow/serving
     container_image: tensor_serving
     restart: always
-    environment:
-      MODEL_CONFIG_FILE: /models/models.config
     command: --model_config_file=/models/models.config --allow_version_labels_for_unavailable_models=true
     ports:
       - '8500:8500'
