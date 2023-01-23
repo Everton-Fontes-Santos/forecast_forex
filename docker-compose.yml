@@ -4,6 +4,7 @@ services:
   tensorflow-serving:
     image: tensorflow/serving
     container_image: tensor_serving
+    restart: always
     environment:
       MODEL_CONFIG_FILE: /models.config
       MODEL_BASE_PATH: /models/saved_model
