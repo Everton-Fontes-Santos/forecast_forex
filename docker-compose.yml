@@ -9,7 +9,7 @@ services:
       MODEL_CONFIG_FILE: /models.config
       MODEL_BASE_PATH: /models/
       MODEL_NAME: saved_model
-    command: --model_config_file=/models/models.config
+    command: --model_config_file=/models/models.config --allow_version_labels_for_unavailable_models=true
     ports:
       - '8500:8500'
       - '8501:8501'
