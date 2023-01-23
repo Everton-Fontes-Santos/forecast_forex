@@ -2,7 +2,7 @@ FROM tensorflow/serving
 
 COPY ./models/ /models/
 
-COPY ./config.conf /config/config.config
+COPY ./config.config /config/config.config
 
 ENV MODEL_CONFIG_FILE=/config/config.config
 
