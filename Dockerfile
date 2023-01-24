@@ -11,4 +11,4 @@ EXPOSE 8501
 #ENV MODEL_BASE_PATH=/models/
 #ENV MODEL_NAME=saved_model
 
-RUN tensorflow_model_server --rest_api_port=8601 --model_config_file=/models/models.config --allow_version_labels_for_unavailable_models=true
+RUN tensorflow_model_server --rest_api_port=8501 --model_config_file=/models/models.config --allow_version_labels_for_unavailable_models=true
